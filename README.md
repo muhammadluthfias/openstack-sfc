@@ -15,8 +15,9 @@ Linux Ubuntu 18.04
 
 Minimal Hardware :
 
-- RAM 
-- Harddisk
+- CPU       : 4 CPU
+- RAM       : 8-16 GB
+- Harddisk  : 25 GB
 
 ## Documentation
 Youtube : 
@@ -30,11 +31,11 @@ Note : this demo should run on ubuntu 18.04 LTS
 $ git clone https://github.com/muhammadluthfias/openstack-sfc.git
 ```
 
-2. Install Requirements
+2. Install OpenStack Devstack Requirements
 
 ```sh
 $ cd openstack-sfc
-$ ./install.sh
+$ ./devstack.sh
 ```
 
 3. Devstack Configuration
@@ -104,7 +105,7 @@ disable_service tempest
 enable_isolated_metadata = True
 ```
 
-4. Running Configuration
+4. Running Configuration & Installation
 ```sh
 $ ./stack.sh
 ```
