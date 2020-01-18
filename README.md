@@ -62,10 +62,10 @@ OVS_BRIDGE_MAPPINGS=public:br-ex
 ONBOOT=yes
 
 ADMIN_PASSWORD=secret
-MYSQL_PASSWORD=secret
-RABBIT_PASSWORD=secret
+MYSQL_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
 SERVICE_PASSWORD=$ADMIN_PASSWORD
-SERVICE_TOKEN=secret
+SERVICE_TOKEN=$ADMIN_PASSWORD
 
 ############################################################
 # Customize the following section based on your installation
@@ -105,10 +105,23 @@ disable_service tempest
 enable_isolated_metadata = True
 ```
 
-4. Running Configuration & Installation
+4. Running Configuration & Installation OpenStack Devstack
 ```sh
 $ ./stack.sh
 ```
+Note : Open Dashboard OpenStack in Browser
+
+5. Installation & Configuration Service Function Chaining
+
+   -   Download & Configure Cloud Image for Instance (Ubuntu 16.04 & MikroTik RouterOS), Create & Configure Instance, and Service Function Chaining Configuration
+
+```sh
+$ ./sfc.sh
+```
+
+## Test
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
 
 
 
